@@ -7,4 +7,4 @@ cd functions
 
 # We deploy our functions up to our AWS account
 # this step we've still to implement
-# serverless deploy
+S

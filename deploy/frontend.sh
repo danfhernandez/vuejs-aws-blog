@@ -5,9 +5,12 @@ cd frontend/
 npm install
 npm run build
 
+# deploy frontend project
+npm run deploy
+
 # navigate into the directory which contains
 # our built frontend
-cd dist/
+# cd dist/
 
 # Push to S3
 # We've still to do this
