@@ -1,12 +1,18 @@
 const AWS = require('aws-sdk');
 
-module.exports.index = (event, context, callback) => {
+var docClient = new AWS.DynamoDB.DocumentClient()
 
-    callback(null, {
-        statusCode: 200,
-        headers: {
-            'Access-Control-Allow-Origin': '*'
-        },
-        body: JSON.stringify({ message: "Hello World" }),
+module.exports.index = (event, context, callback) => {
+    var docClient = new AWS.DynamoDB.DocumentClient()
+    var params = {
+        TableName: "aws-vuejs-blog-posts",
+        ProjectionExpression: "type, posted, body"
+    }
+    docClient.scan(params, function(err, data){
+        if(err){
+            callback(err, null);
+        }else{
+            callback(null, data.Items);
+        }
     })
 }
