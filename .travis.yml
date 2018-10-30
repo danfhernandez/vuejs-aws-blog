@@ -9,3 +9,6 @@ jobs:
       script: ./deploy/frontend.sh
     - stage: deploy_functions
       script: ./deploy/functions.sh
+before_install:
+  - chmod +x frontend.sh
+  - chmod +x functions.sh
