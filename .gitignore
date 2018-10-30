@@ -4,6 +4,12 @@ dist/
 npm-debug.log
 yarn-error.log
 
+#SERVERLESS STUFF
+admin.env
+.env
+_meta
+.serverless
+
 # Editor directories and files
 .idea
 *.suo
