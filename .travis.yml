@@ -12,3 +12,4 @@ jobs:
 before_install:
   - chmod +x ./deploy/frontend.sh
   - chmod +x ./deploy/functions.sh
+  - pip install awscli
